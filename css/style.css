@@ -30,9 +30,10 @@
     font-weight: normal;
     font-style: normal;
 }
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;400&display=swap');
 
 body {
-    font-family: 'Sam3KRFont', sans-serif;
+    font-family: 'Noto Sans KR', sans-serif;
     line-height: 28px;
     font-weight: 300;
     font-size: 14px;
@@ -221,8 +222,11 @@ button:focus {
 
 
 /*IMAGES*/
-img {
+.myphoto img {
     width: 100%;
+    max-width: 439px;
+    margin: 0 auto;
+    display: block;
 }
 
 hr {
@@ -269,6 +273,7 @@ ul.list-check li::before {
 /* SECTION TITLE
 ----------------------------------------------------- */
 .section-title {
+    font-family: 'Sam3KRFont';
     margin-bottom: 80px;
     text-align: center;
     font-size: 50px;
@@ -625,7 +630,8 @@ SOCIAL ICON
 }
 
 .entry-meta ul li {
-    padding: 0 10px;
+    padding: 0;
+    width: 20%;
 }
 
 .entry-meta ul li a {
@@ -634,15 +640,17 @@ SOCIAL ICON
     font-weight: 400;
     padding: 5px 0px;
     margin-bottom: 5px;
-    width: 110px;
+    width: 100%;
     text-align: center;
     background: url(../images/button.png) no-repeat;
-    font-size: 15px;
+    font-size: 12px;
+    background-size: 100% 100%;
 }
 
 .entry-meta ul li a:hover {
     background: url(../images/button-hover.png) no-repeat;
     color: #FFFFFF;
+    background-size: 100% 100%;
 }
 
 .blog-more {
@@ -1377,15 +1385,20 @@ ul.contact li img{
     color: #f2f2f2;
 }
 
-.resume-box {
-    display: flex;
-    justify-content: space-between;
-}
-
 .resume-box div {
     margin-right: 23px;
+    width: 100%;
 }
 
 .license {
     margin-top: 73px;
+}
+@media (max-width:991px){
+    .short-info ul li{
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    .resume-box{
+        display: block;
+    }
 }
